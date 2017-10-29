@@ -30,3 +30,10 @@ export const Button = styled.button`
   }
 
 `;
+
+
+export const ElementCounter = styled.p`
+  font-family: sans-serif;
+	font-weight: lighter;
+  font-size: 1.5rem;
+`;

@@ -80,6 +80,7 @@ class App extends Component {
             <div>
                 <ElementsListHeader />
                 <CreateElement
+                    elements={this.state.elements}
                     addElement={this.addElement.bind(this)}
                 />
                 <ElementsList

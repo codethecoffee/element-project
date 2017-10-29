@@ -1,14 +1,17 @@
 import React, { Component } from "react";
-import { Input, Button } from "../styles";
+import { Input, Button, ElementCounter } from "../styles";
 
 
 class CreateElement extends Component {
 
     constructor (props) {
       super(props);
+
       this.state = {
         input: ""
       };
+
+      console.log("Length of the list: ", this.props.elements.length);
     }
 
     render () {
@@ -25,7 +28,7 @@ class CreateElement extends Component {
                   />
                   <Button>Add Element</Button>
               </form>
-              <p>Value of the input: {this.state.input}</p>
+              <ElementCounter>Number of elements: {this.props.elements.length}</ElementCounter>
             </center>
           </div>
         );
