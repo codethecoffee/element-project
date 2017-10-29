@@ -13,5 +13,14 @@ export const Input = styled.input`
   font-size: 2rem;
   font-weight: lighter;
 	border: 2px solid #005b96;
+`;
+
+export const Button = styled.button`
+	font-size: 2rem;
+  font-weight: lighter;
+  border: 2px solid #005b96;
+  padding: 1rem;
+  background-color: white;
   border-radius: 15px;
+
 `;

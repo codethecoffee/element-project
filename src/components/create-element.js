@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Input } from "../styles";
+import { Input, Button } from "../styles";
 
 
 class CreateElement extends Component {
@@ -23,7 +23,7 @@ class CreateElement extends Component {
                     onChange={event => this.setState({ input: event.target.value })}
                     ref="element"
                   />
-                  <button>Add Element</button>
+                  <Button>Add Element</Button>
               </form>
               <p>Value of the input: {this.state.input}</p>
             </center>
