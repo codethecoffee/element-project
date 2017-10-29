@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import { Input } from "../styles";
+
 
 class CreateElement extends Component {
 
@@ -12,17 +14,19 @@ class CreateElement extends Component {
     render () {
         return (
           <div>
-            <form onSubmit={this.onSubmit.bind(this)} >
-                <input
-                  type="text"
-                  placeholder="Type element here..."
-                  /* Set the state to user input */
-                  onChange={event => this.setState({ input: event.target.value })}
-                  ref="element"
-                />
-                <button>Add Element</button>
-            </form>
-            <p>Value of the input: {this.state.input}</p>
+            <center>
+              <form onSubmit={this.onSubmit.bind(this)} >
+                  <Input
+                    type="text"
+                    placeholder="Type element here..."
+                    /* Set the state to user input */
+                    onChange={event => this.setState({ input: event.target.value })}
+                    ref="element"
+                  />
+                  <button>Add Element</button>
+              </form>
+              <p>Value of the input: {this.state.input}</p>
+            </center>
           </div>
         );
     }
