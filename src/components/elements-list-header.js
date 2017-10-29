@@ -1,13 +1,13 @@
 import React, { Component } from "react";
-import { Header } from "../styles";
+import { Title } from "../styles";
 
 const ElementsListHeader = (props) => {
     return (
-        <Header>
+        <Title>
           <center>
             Manage My Elements
           </center>
-        </Header>
+        </Title>
     );
 }
 
