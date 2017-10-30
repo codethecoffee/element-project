@@ -1,18 +1,22 @@
 import React, { Component } from "react";
 import ElementsListItem from "./elements-list-item";
+import { Grid } from 'grid-styled'
+
 
 class ElementsList extends Component {
     renderElements () {
         return this.props.elements.map((element, index) => {
             return (
-              <div>
-                <ElementsListItem
-                    key={index}
-                    index={index}
-                    {...element}
-                    deleteElement={this.props.deleteElement}
-                />
-              </div>
+                <Grid>
+                <center>
+                  <ElementsListItem
+                      key={index}
+                      index={index}
+                      {...element}
+                      deleteElement={this.props.deleteElement}
+                  />
+                </center>
+                </Grid>
             )
         });
     }
@@ -24,11 +28,7 @@ class ElementsList extends Component {
         return (
           <div>
             <center>
-              <table>
-                  <tbody>
-                      {this.renderElements()}
-                  </tbody>
-              </table>
+                {this.renderElements()}
             </center>
           </div>
         )

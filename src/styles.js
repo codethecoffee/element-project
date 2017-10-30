@@ -39,23 +39,25 @@ export const ElementCounter = styled.p`
 
 export const ElementContainer = styled.div`
   border: 2px solid #005b96;
-  height: 45px;
-  width: 300px;
+  height: 200px;
+  width: 200px;
+  padding-top: 20px;
   font-family: sans-serif;
   font-weight: lighter;
-  font-size: 2rem;
+  font-size: 90%;
   position: relative;
 `;
 
 export const ElementName = styled.span`
   padding-left: 10px;
+  font-size: 150%;
 `;
 
 export const DeleteButton = styled.button`
   border-style: none;
-  height: 44px;
-  width: 46px;
-  font-size: 1.5rem;
+  height: 18px;
+  width: 20px;
+  font-size: 0.8rem;
   font-weight: lighter;
   background-color: white;
   padding: 5px;
@@ -65,7 +67,6 @@ export const DeleteButton = styled.button`
 
   &:hover {
     cursor: pointer;
-    background-color: red;
-    color: white;
+    color: red;
   }
 `;

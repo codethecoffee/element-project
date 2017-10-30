@@ -19,7 +19,11 @@ export default class ElementsListItem extends Component {
         return (
             <tr>
               <ElementContainer>
-                <ElementName>{this.renderElement()}</ElementName>
+                <ElementName>
+                  <center>
+                    {this.renderElement()}
+                  </center>
+                </ElementName>
                   <DeleteButton onClick={this.deleteElement.bind(this)}>X</DeleteButton>
               </ElementContainer>
             </tr>
