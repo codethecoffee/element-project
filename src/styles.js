@@ -82,4 +82,10 @@ export const DeleteButton = styled.button`
     cursor: pointer;
     color: #b3cde0;
   }
+
+  &:focus {
+    border: none;
+    outline: none;
+  }
+
 `;
