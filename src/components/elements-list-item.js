@@ -1,7 +1,12 @@
 import React, { Component } from "react";
+import {
+  ElementContainer,
+  DeleteButton,
+  ElementName
+} from "../styles";
 
 export default class ElementsListItem extends Component {
-    renderTask () {
+    renderElement () {
         console.log("The element: ", this.props.element)
         return (
             <td>
@@ -13,10 +18,10 @@ export default class ElementsListItem extends Component {
     render () {
         return (
             <tr>
-                {this.renderTask()}
-                <td>
-                  <button onClick={this.deleteElement.bind(this)}>Delete</button>
-                </td>
+              <ElementContainer>
+                <ElementName>{this.renderElement()}</ElementName>
+                  <DeleteButton onClick={this.deleteElement.bind(this)}>X</DeleteButton>
+              </ElementContainer>
             </tr>
         )
     }

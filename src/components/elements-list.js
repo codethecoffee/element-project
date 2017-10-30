@@ -19,16 +19,17 @@ class ElementsList extends Component {
 
     render () {
         if (!this.props.elements.length) {
-            return (<p>My Elements: {" " + this.props.elements.length}</p>);
+            return (<p>You don't have any elements! Add some.</p>);
         }
         return (
           <div>
-            <p>My Elements: {" " + this.props.elements.length}</p>
-            <table>
-                <tbody>
-                    {this.renderElements()}
-                </tbody>
-            </table>
+            <center>
+              <table>
+                  <tbody>
+                      {this.renderElements()}
+                  </tbody>
+              </table>
+            </center>
           </div>
         )
     }

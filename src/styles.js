@@ -31,9 +31,41 @@ export const Button = styled.button`
 
 `;
 
-
 export const ElementCounter = styled.p`
   font-family: sans-serif;
 	font-weight: lighter;
   font-size: 1.5rem;
+`;
+
+export const ElementContainer = styled.div`
+  border: 2px solid #005b96;
+  height: 45px;
+  width: 300px;
+  font-family: sans-serif;
+  font-weight: lighter;
+  font-size: 2rem;
+  position: relative;
+`;
+
+export const ElementName = styled.span`
+  padding-left: 10px;
+`;
+
+export const DeleteButton = styled.button`
+  border-style: none;
+  height: 44px;
+  width: 46px;
+  font-size: 1.5rem;
+  font-weight: lighter;
+  background-color: white;
+  padding: 5px;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+
+  &:hover {
+    cursor: pointer;
+    background-color: red;
+    color: white;
+  }
 `;
