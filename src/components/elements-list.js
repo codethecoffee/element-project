@@ -7,7 +7,7 @@ class ElementsList extends Component {
     renderElements () {
         return this.props.elements.map((element, index) => {
             return (
-                <Grid>
+                <Grid p={1}>
                 <center>
                   <ElementsListItem
                       key={index}

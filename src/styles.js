@@ -62,8 +62,8 @@ export const DeleteButton = styled.button`
   background-color: white;
   padding: 5px;
   position: absolute;
-  top: 0px;
-  right: 0px;
+  top: 2px;
+  right: 2px;
 
   &:hover {
     cursor: pointer;
