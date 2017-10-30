@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Input, Button, ElementCounter } from "../styles";
+import { Input, Button, Message } from "../styles";
 
 
 class CreateElement extends Component {
@@ -28,7 +28,7 @@ class CreateElement extends Component {
                   />
                   <Button>Add Element</Button>
               </form>
-              <ElementCounter>Number of elements: {this.props.elements.length}</ElementCounter>
+              <Message><b>Number of elements:</b> {this.props.elements.length}</Message>
             </center>
           </div>
         );

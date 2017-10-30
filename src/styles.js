@@ -6,6 +6,12 @@ export const Title = styled.p`
   font-size: 4rem;
 `;
 
+export const Message = styled.p`
+  font-family: sans-serif;
+	font-weight: lighter;
+  font-size: 1.5rem;
+`;
+
 export const Input = styled.input`
 	padding: 1rem;
 	margin: 0.5rem;
@@ -29,12 +35,11 @@ export const Button = styled.button`
     color: white;
   }
 
-`;
+  &:focus {
+    border: none;
+    outline: none;
+  }
 
-export const ElementCounter = styled.p`
-  font-family: sans-serif;
-	font-weight: lighter;
-  font-size: 1.5rem;
 `;
 
 export const ElementContainer = styled.div`

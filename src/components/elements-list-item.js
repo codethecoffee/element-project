@@ -19,7 +19,6 @@ export default class ElementsListItem extends Component {
     generateAcronym() {
       const acronym = this.props.element.substring(0,2);
       return acronym;
-
     }
 
     render () {

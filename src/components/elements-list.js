@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import ElementsListItem from "./elements-list-item";
-import { Grid } from 'grid-styled'
-
+import { Grid } from 'grid-styled';
+import { Message } from "../styles";
 
 class ElementsList extends Component {
     renderElements () {
@@ -23,7 +23,11 @@ class ElementsList extends Component {
 
     render () {
         if (!this.props.elements.length) {
-            return (<p>You don't have any elements! Add some.</p>);
+            return (
+              <Message>
+                <center>You haven't created any elements yet!</center>
+              </Message>
+            );
         }
         return (
           <div>

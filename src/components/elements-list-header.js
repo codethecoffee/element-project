@@ -1,11 +1,14 @@
 import React, { Component } from "react";
-import { Title } from "../styles";
+import { Title, Message } from "../styles";
 
 const ElementsListHeader = (props) => {
     return (
         <Title>
           <center>
-            Element Acronym Generator
+            Element Symbol Generator
+            <Message>
+              Type in a name for an imaginary element, and I'll generate a symbol for you!
+            </Message>
           </center>
         </Title>
     );
