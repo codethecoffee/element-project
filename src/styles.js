@@ -40,7 +40,7 @@ export const ElementCounter = styled.p`
 export const ElementContainer = styled.div`
   border: 5px solid #005b96;
   height: 200px;
-  width: 200px;
+  width: 190px;
   padding-top: 20px;
   font-family: sans-serif;
   font-weight: lighter;
@@ -51,11 +51,19 @@ export const ElementContainer = styled.div`
 export const Acronym = styled.div`
   font-size: 7.5rem;
   font-weight: lighter;
+
+  &:first-letter {
+    text-transform: uppercase;
+  }
 `;
 
 export const ElementName = styled.div`
   padding-left: 10px;
   font-size: 150%;
+
+  &:first-letter {
+    text-transform: uppercase;
+  }
 `;
 
 export const DeleteButton = styled.button`
@@ -72,6 +80,6 @@ export const DeleteButton = styled.button`
 
   &:hover {
     cursor: pointer;
-    color: red;
+    color: #b3cde0;
   }
 `;
