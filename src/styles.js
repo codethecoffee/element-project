@@ -38,7 +38,7 @@ export const ElementCounter = styled.p`
 `;
 
 export const ElementContainer = styled.div`
-  border: 2px solid #005b96;
+  border: 5px solid #005b96;
   height: 200px;
   width: 200px;
   padding-top: 20px;
@@ -48,7 +48,12 @@ export const ElementContainer = styled.div`
   position: relative;
 `;
 
-export const ElementName = styled.span`
+export const Acronym = styled.div`
+  font-size: 7.5rem;
+  font-weight: lighter;
+`;
+
+export const ElementName = styled.div`
   padding-left: 10px;
   font-size: 150%;
 `;

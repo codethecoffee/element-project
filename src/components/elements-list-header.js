@@ -5,7 +5,7 @@ const ElementsListHeader = (props) => {
     return (
         <Title>
           <center>
-            Manage My Elements
+            Element Acronym Generator
           </center>
         </Title>
     );

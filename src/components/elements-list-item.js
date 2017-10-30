@@ -2,7 +2,8 @@ import React, { Component } from "react";
 import {
   ElementContainer,
   DeleteButton,
-  ElementName
+  ElementName,
+  Acronym
 } from "../styles";
 
 export default class ElementsListItem extends Component {
@@ -15,15 +16,24 @@ export default class ElementsListItem extends Component {
         );
     }
 
+    generateAcronym() {
+      const acronym = this.props.element.substring(0,2);
+      return acronym;
+
+    }
+
     render () {
         return (
             <tr>
               <ElementContainer>
+                <center>
+                <Acronym>
+                    {this.generateAcronym()}
+                </Acronym>
                 <ElementName>
-                  <center>
                     {this.renderElement()}
-                  </center>
                 </ElementName>
+              </center>
                   <DeleteButton onClick={this.deleteElement.bind(this)}>X</DeleteButton>
               </ElementContainer>
             </tr>
