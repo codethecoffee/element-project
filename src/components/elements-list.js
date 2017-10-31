@@ -3,26 +3,9 @@ import ElementsListItem from "./elements-list-item";
 import { Grid } from "grid-styled";
 import { Message } from "../styles";
 
-class ElementsList extends Component {
-  renderElements() {
-    return this.props.elements.map((element, index) => {
-      return (
-        <Grid p={1}>
-          <center>
-            <ElementsListItem
-              key={index}
-              index={index}
-              element={element}
-              deleteElement={this.props.deleteElement}
-            />
-          </center>
-        </Grid>
-      );
-    });
-  }
+const ElementsList = (props) => {
 
-  render() {
-    if (!this.props.elements.length) {
+    if (!props.elements.length) {
       return (
         <Message>
           <center>You haven't created any elements yet!</center>
@@ -32,11 +15,23 @@ class ElementsList extends Component {
     return (
       <div>
         <center>
-          {this.renderElements()}
+          {props.elements.map((element, index) => {
+            return (
+              <Grid p={1}>
+                <center>
+                  <ElementsListItem
+                    key={index}
+                    index={index}
+                    element={element}
+                    deleteElement={props.deleteElement}
+                  />
+                </center>
+              </Grid>
+            );
+          })}
         </center>
       </div>
     );
-  }
 }
 
 export default ElementsList;
