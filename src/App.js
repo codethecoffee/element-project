@@ -31,13 +31,6 @@ const elements = {
         console.log("New list of elements saved to local storage", JSON.stringify(this.items));
     },
 
-    add (element) {
-        /* Add element to the array */
-        this.items.push(element);
-        /* Save new items array to local storage */
-        this.save();
-    },
-
     remove (index) {
         /* Remove one element at the given index from the array */
         this.items.splice(index, 1);
@@ -51,23 +44,27 @@ class App extends Component {
     constructor (props) {
         super(props);
 
-        /* Start off by retrieving local data */
-        elements.populate();
-
         this.state = {
-            elements: elements.items
+            elements: []
         };
     }
 
-    addElement (element) {
+    addElement = (element) => {
 
       /* Remove whitespace from both sides of the string for clean result */
       element = element.trim();
+
+      /* If nothing was typed, do not add anything */
       if (!element) { return; }
-      elements.add({
-          element
-      });
-      this.setState({ elements: this.state.elements });
+
+      var new_array = this.state.elements;
+      console.log("New array before addition of element: ", this.state.elements)
+
+      /* Add new element to the array */
+      new_array.push(element);
+
+      this.setState( {elements: new_array } );
+
     }
 
     deleteElement (elementId) {
@@ -81,7 +78,7 @@ class App extends Component {
                 <ElementsListHeader />
                 <CreateElement
                     elements={this.state.elements}
-                    addElement={this.addElement.bind(this)}
+                    addElement={this.addElement}
                 />
                 <ElementsList
                     elements={this.state.elements} /* Pass all of the data + functions as props */

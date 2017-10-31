@@ -12,7 +12,7 @@ class ElementsList extends Component {
                   <ElementsListItem
                       key={index}
                       index={index}
-                      {...element}
+                      element={element}
                       deleteElement={this.props.deleteElement}
                   />
                 </center>
