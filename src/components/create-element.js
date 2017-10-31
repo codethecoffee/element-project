@@ -33,7 +33,7 @@ class CreateElement extends Component {
     );
   }
 
-  onSubmit = event => {
+  onSubmit = (event) => {
     event.preventDefault();
     /* Add element that user typed in */
     this.props.addElement(this.state.input);

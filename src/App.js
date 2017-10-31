@@ -43,9 +43,7 @@ class App extends Component {
           addElement={this.addElement.bind(this)}
         />
         <ElementsList
-          elements={
-            this.state.elements
-          } /* Pass all of the data + functions as props */
+          elements={this.state.elements}
           deleteElement={this.deleteElement.bind(this)}
         />
       </div>
