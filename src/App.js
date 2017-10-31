@@ -53,23 +53,22 @@ class App extends Component {
 
       /* Remove whitespace from both sides of the string for clean result */
       element = element.trim();
-
       /* If nothing was typed, do not add anything */
       if (!element) { return; }
-
-      var new_array = this.state.elements;
-      console.log("New array before addition of element: ", this.state.elements)
-
       /* Add new element to the array */
+      var new_array = this.state.elements;
       new_array.push(element);
-
-      this.setState( {elements: new_array } );
+      /* Update the state with the new array */
+      this.setState( { elements: new_array } );
 
     }
 
-    deleteElement (elementId) {
-        elements.remove(elementId);
-        this.setState({ elements: this.state.elements });
+    deleteElement (index) {
+      var new_array = this.state.elements;
+      /* Remove one element at specified index using splice function */
+      new_array.splice(index, 1);
+      /* Update the state */
+      this.setState({ elements: new_array });
     }
 
     render () {
@@ -82,7 +81,7 @@ class App extends Component {
                 />
                 <ElementsList
                     elements={this.state.elements} /* Pass all of the data + functions as props */
-                    deleteElement={this.deleteElement.bind(this)}
+                    deleteElement={this.deleteElement}
                 />
             </div>
         );
