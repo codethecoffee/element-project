@@ -34,11 +34,6 @@ export const Button = styled.button`
     background-color: #011f4b;
     color: white;
   }
-
-  &:focus {
-    border: none;
-    outline: none;
-  }
 `;
 
 export const ElementContainer = styled.div`

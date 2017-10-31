@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Title, Message } from "../styles";
 
-const ElementsListHeader = props => {
+const ElementsListHeader = (props) => {
   return (
     <Title>
       <center>

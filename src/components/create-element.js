@@ -19,7 +19,8 @@ class CreateElement extends Component {
               type="text"
               placeholder="Type element here..."
               /* Set the state to user input */
-              onChange={event => this.setState({ input: event.target.value })}
+              value={this.state.input}
+              onChange={(event) => this.setState({ input: event.target.value })}
               ref="input"
             />
             <Button>Add Element</Button>
@@ -37,9 +38,7 @@ class CreateElement extends Component {
     /* Add element that user typed in */
     this.props.addElement(this.state.input);
     /* Set the value of the input back to an empty string */
-    this.setState({ input: "" });
-
-    console.log("Length of the list: ", this.props.elements.length);
+    this.setState( { input: "" } );
   };
 }
 
